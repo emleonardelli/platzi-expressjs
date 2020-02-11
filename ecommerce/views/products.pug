@@ -1,0 +1,23 @@
+extends layout.pug
+block hero
+  section.hero.is-dark.is-bold
+    .hero-body
+      .container
+        h1.title Testlite shop
+        h2.subtitle Find that product
+block content
+  .container(style="flex:1; padding: 50px 0;")
+    .columns.is-multiline
+      each p in products
+        .column.is-one-quarter
+          .card
+            .card-image
+              figure.image(style="height: 190px")
+                img(src=p.image style="height: 100%; object-fit: cover")
+            .card-content
+              h1.title= p.name
+              .button.is-full.is-principal
+                span.icon
+                  i.fas.fa-shopping-cart
+                span Add to cart
+                  strong= ` ${p.price} USD`

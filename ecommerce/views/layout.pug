@@ -1,0 +1,12 @@
+doctype html
+head
+  meat(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Testlite shop
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css")
+body(style="display: flex; min-height: 100vh; flex-direction: column")
+  script(defer src="https://use.fontawesome.com/releases/v5.7.1/css/all.css")
+  include navbar.pug
+  block hero
+  block content
+  include footer.pug
