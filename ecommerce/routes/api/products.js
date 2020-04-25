@@ -42,7 +42,7 @@ router.post('/', async function(req, res, next) {
 router.put('/:id', async function(req, res, next) {
   try {
     const id = req.params.id
-    const { body: product } = req.body
+    const { body: product } = req
     res.status(200).json({
       data: await productService.updateProduct({ productId: id, product }),
       message: 'product updated'
